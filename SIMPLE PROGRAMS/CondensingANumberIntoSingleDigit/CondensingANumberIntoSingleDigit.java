@@ -2,19 +2,18 @@ import java.util.Scanner;
 
 public class CondensingANumberIntoSingleDigit{
 
-    int value=0;
+    int value;
     int input =0;
     public int CondensingNumber(int input){
         this.input = input;
         while(this.input>9){
-            value = value+(this.input%10);
-            this.input = this.input/10;
+            value =0;
+            while (this.input>0) {
+                value = value + (this.input % 10);
+                this.input = this.input / 10;
+            }
+            input =this.value;
         }
-        value +=this.input;
-        int a = value;
-
-        if(value>9) this.CondensingNumber(a);
-
         return value;
     }
     public static void main(String[] args){
