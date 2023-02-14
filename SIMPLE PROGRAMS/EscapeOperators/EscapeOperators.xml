@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<MAIN>
-    <INDEX>\r - CARRIAGE RETURN        \t - TAB     \v - VERTICAL TAB        \f - FORM FEED        \" - DOUBLE QUOTE        \\ - BACK SLASH        \065 - OCTAL        \x24 - HEX DECIMAL     NULL - \0  </INDEX>
-</MAIN>
