@@ -1,13 +1,10 @@
-import java.net.SocketTimeoutException;
 import java.util.Scanner;
-
-import javax.sound.sampled.SourceDataLine;
 
 class MultiplicationTables{
 
-    MultiplicationTables(int l,int t){
+    MultiplicationTables(int which,int l,int t){
 
-        for(int i=1;i<=t;i++){
+        for(int i=which;i<=which+t;i++){
             for(int j=1;j<=l;j++){
                 System.out.println(i+"X"+j+"="+i*j);
             }
@@ -17,10 +14,20 @@ class MultiplicationTables{
 
     public static void main(String []args){
     
-            Scanner io = new Scanner(System.in);
+        Scanner io = new Scanner(System.in);
 
-        System.out.println("ENTER THE LENGTH AND TILLS :-");
-        MultiplicationTables key = new MultiplicationTables((io.nextInt()),(io.nextInt()));
+        int[] meta = new int[3];
+
+        System.out.print("ENTER THE FIRST TABLE     : ");
+        meta[0] = io.nextInt();
+
+        System.out.print("ENTER THE LENGTH TABLE    : ");
+        meta[1] = io.nextInt();
+        
+        System.out.print("ENTER THE NUMBER OF TABLE : ");
+        meta[2] = io.nextInt();
+
+        MultiplicationTables key = new MultiplicationTables(meta[0],meta[1],meta[2]);
 
     }
 }

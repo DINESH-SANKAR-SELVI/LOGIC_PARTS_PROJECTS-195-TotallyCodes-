@@ -1,4 +1,3 @@
-import java.beans.EventHandler;
 import java.util.Scanner;
 
 class EvenNumbersUptoRange{
@@ -7,7 +6,6 @@ class EvenNumbersUptoRange{
         int count=1;
         for(int i=0;i<=limt;i++){
             if((i%2)==0){
-
                 System.out.println(count+") "+i);
                 ++count;
             }
@@ -19,7 +17,6 @@ class EvenNumbersUptoRange{
         System.out.print("ENTER THE LIMIT TO FIND EVEN :");
 
         int limt = io.nextInt();
-        EvenNumbersUptoRange key = new EvenNumbersUptoRange(limt);
-        
+        EvenNumbersUptoRange key = new EvenNumbersUptoRange(limt);  
     }
 }
